@@ -9,10 +9,20 @@
 <body>
   <header class="site-header">
     <nav class="nav">
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">☰</button>
       <div class="nav-left"><a href="index.html">Home</a> <a href="accommodation.html">Accommodation</a></div>
       <div class="nav-center"><img src="assets/images/rescape-logo.jpg" alt="Rescape logo" class="nav-logo"></div>
       <div class="nav-right"><a href="universities.html">Universities</a> <a class="btn primary" href="about.html">About Us</a> <a href="contact.html">Contact</a></div>
     </nav>
+    <div id="mobile-menu" class="mobile-nav" aria-hidden="true">
+      <div class="nav-group">
+        <a href="index.html">Home</a>
+        <a href="accommodation.html">Accommodation</a>
+        <a href="universities.html">Universities</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -76,9 +86,24 @@
   </main>
 
   <script>
-    document.querySelector('.menu-toggle').addEventListener('click', function(){
-      document.body.classList.toggle('menu-open');
-    });
+    (function(){
+      var btn = document.querySelector('.menu-toggle');
+      var mobile = document.getElementById('mobile-menu');
+      if (!btn || !mobile) return;
+      btn.addEventListener('click', function(){
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        mobile.setAttribute('aria-hidden', String(open));
+        document.body.classList.toggle('nav-open');
+      });
+      mobile.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){
+          btn.setAttribute('aria-expanded','false');
+          mobile.setAttribute('aria-hidden','true');
+          document.body.classList.remove('nav-open');
+        });
+      });
+    })();
   </script>
 </body>
 </html>
