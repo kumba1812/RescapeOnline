@@ -42,7 +42,7 @@ textarea,
 .search-form select {
   padding:12px 14px;
   border-radius:8px;
-  border:1px solid rgba(45,55,72,0.18);
+  border:1px solid rgb(27 28 29 / 57%);
   min-width:160px;
   background:var(--white);
 }
@@ -51,7 +51,7 @@ textarea:focus,
 .search-form input:focus,
 .search-form select:focus {
   outline:none;
-  border-color:rgba(45,55,72,0.34);
+  border-color:rgb(27 28 29 / 57%);
   box-shadow:0 0 0 4px rgba(66,153,225,0.08);
 }
 
