@@ -11,9 +11,11 @@
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:'Helvetica Neue',Arial,sans-serif;color:var(--dark);background:var(--white)}
 
-.site-header{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,0.98);padding:10px 16px;z-index:120;border-bottom:1px solid rgba(0,0,0,0.06);backdrop-filter:blur(6px);box-shadow:0 2px 8px rgba(45,55,72,0.04)}
+.site-header{position:fixed;top:0;left:0;right:0;background:transparent;padding:10px 16px;z-index:120;transition:background .22s ease,box-shadow .22s ease,border-color .22s ease}
+.site-header.scrolled{background:rgba(255,255,255,0.98);border-bottom:1px solid rgba(0,0,0,0.06);backdrop-filter:blur(6px);box-shadow:0 2px 8px rgba(45,55,72,0.04)}
 .nav{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;position:relative}
 .nav-logo{height:36px}
+.nav-center{display:flex;align-items:center;gap:10px}
 .menu-toggle{background:none;border:0;font-size:22px;display:none;padding:6px}
 .filter-btn{background:transparent;border:1px solid var(--muted);padding:6px 10px;border-radius:8px;color:var(--dark)}
 .btn{padding:8px 14px;border-radius:8px;border:0;cursor:pointer}
@@ -56,4 +58,10 @@ html,body{height:100%;margin:0;font-family:'Helvetica Neue',Arial,sans-serif;col
   .mobile-nav a{display:block;padding:10px 12px;border-radius:8px;color:var(--dark);text-decoration:none}
   body.nav-open .mobile-nav{opacity:1;transform:translateY(0) scaleY(1);pointer-events:auto}
   body.nav-open{overflow:hidden}
+}
+
+/* Brand name next to logo */
+.brand-name{font-weight:700;color:var(--dark);font-size:18px;letter-spacing:0.2px}
+@media (max-width:720px){
+  .brand-name{font-size:16px}
 }

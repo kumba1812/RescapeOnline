@@ -11,7 +11,7 @@
     <nav class="nav">
       <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">☰</button>
       <div class="nav-left"><a href="index.html">Home</a></div>
-      <div class="nav-center"><img src="assets/images/rescape-logo.jpg" alt="Rescape logo" class="nav-logo"></div>
+      <div class="nav-center"><img src="assets/images/rescape-logo.jpg" alt="Rescape logo" class="nav-logo"><span class="brand-name">Rescape</span></div>
       <div class="nav-right"><a href="accommodation.html">Accommodation</a> <a href="universities.html">Universities</a></div>
     </nav>
     <div id="mobile-menu" class="mobile-nav" aria-hidden="true">
@@ -60,20 +60,29 @@
     (function(){
       var btn = document.querySelector('.menu-toggle');
       var mobile = document.getElementById('mobile-menu');
-      if (!btn || !mobile) return;
-      btn.addEventListener('click', function(){
-        var open = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!open));
-        mobile.setAttribute('aria-hidden', String(open));
-        document.body.classList.toggle('nav-open');
-      });
-      mobile.querySelectorAll('a').forEach(function(a){
-        a.addEventListener('click', function(){
-          btn.setAttribute('aria-expanded','false');
-          mobile.setAttribute('aria-hidden','true');
-          document.body.classList.remove('nav-open');
+      var header = document.querySelector('.site-header');
+      if (btn && mobile) {
+        btn.addEventListener('click', function(){
+          var open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!open));
+          mobile.setAttribute('aria-hidden', String(open));
+          document.body.classList.toggle('nav-open');
         });
-      });
+        mobile.querySelectorAll('a').forEach(function(a){
+          a.addEventListener('click', function(){
+            btn.setAttribute('aria-expanded','false');
+            mobile.setAttribute('aria-hidden','true');
+            document.body.classList.remove('nav-open');
+          });
+        });
+      }
+
+      function onScroll(){
+        if (!header) return;
+        if (window.scrollY > 16) header.classList.add('scrolled'); else header.classList.remove('scrolled');
+      }
+      window.addEventListener('scroll', onScroll);
+      onScroll();
     })();
   </script>
 </body>
