@@ -16,10 +16,16 @@ html,body{height:100%;margin:0;font-family:'Helvetica Neue',Arial,sans-serif;col
 .nav{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto;position:relative}
 .nav-logo{height:36px}
 .nav-center{display:flex;align-items:center;gap:10px}
+.nav-left, .nav-right{display:flex;gap:12px;align-items:center}
+.brand-link{display:flex;align-items:center;gap:10px;text-decoration:none}
 .menu-toggle{background:none;border:0;font-size:22px;display:none;padding:6px}
 .filter-btn{background:transparent;border:1px solid var(--muted);padding:6px 10px;border-radius:8px;color:var(--dark)}
 .btn{padding:8px 14px;border-radius:8px;border:0;cursor:pointer}
 .btn.primary{background:var(--primary);color:var(--white)}
+
+.nav a{color:var(--dark);text-decoration:none;padding:8px 10px;border-radius:8px;transition:background .15s ease,color .15s ease}
+.nav a:hover,.nav a:focus{background:var(--ice);color:var(--primary)}
+.menu-toggle:focus,.brand-link:focus,.nav a:focus{outline:2px solid rgba(45,55,72,0.08);outline-offset:2px}
 
 .hero{height:86vh;min-height:420px;display:flex;align-items:center;justify-content:center;background:var(--white);}
 .hero-overlay{max-width:960px;width:100%;text-align:center;padding:48px}
@@ -32,6 +38,8 @@ html,body{height:100%;margin:0;font-family:'Helvetica Neue',Arial,sans-serif;col
 .listing-intro{max-width:900px;margin:36px auto;text-align:center;padding:0 16px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;max-width:1100px;margin:18px auto;padding:0 16px}
 .card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 20px rgba(45,55,72,0.08);border:1px solid rgba(0,0,0,0.04)}
+.card{transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(45,55,72,0.12)}
 .card-media{height:160px;background-size:cover;background-position:center}
 .card-body{padding:14px}
 .card h3{margin:0 0 6px}
@@ -40,6 +48,15 @@ html,body{height:100%;margin:0;font-family:'Helvetica Neue',Arial,sans-serif;col
 .partners{max-width:1100px;margin:36px auto;padding:20px 16px;text-align:center;background:var(--ice);border-radius:12px}
 .partners .logos{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:nowrap;overflow:auto;padding:8px}
 .partners img{height:44px;opacity:0.7}
+
+/* Desktop layout enhancements */
+@media (min-width:1000px){
+  .cards{grid-template-columns:repeat(3,1fr);gap:24px}
+  .card-media{height:200px}
+  .hero-overlay{padding:72px}
+  .partners .logos{gap:28px}
+  .nav{max-width:1200px}
+}
 
 .site-footer{text-align:center;padding:32px;color:var(--muted)}
 
