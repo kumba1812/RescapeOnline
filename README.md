@@ -1,5 +1,6 @@
 ﻿## RescapeOnline
 
+<<<<<<< HEAD
 RESCAPE – Executive Summary
 
 ### Overview
@@ -43,3 +44,5 @@ Unlike traditional accommodation listings, RESCAPE focuses specifically on the s
 - Convenient online access from anywhere in the country or internationally
 
 #### For Universities
+=======
+>>>>>>> 73643c9684f6626ae928c949987667de02b859cb
