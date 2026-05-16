@@ -61,7 +61,9 @@ html,body{height:100%;margin:0;font-family:'Helvetica Neue',Arial,sans-serif;col
 }
 
 /* Brand name next to logo */
-.brand-name{font-weight:700;color:var(--dark);font-size:18px;letter-spacing:0.2px}
+.brand-name{font-weight:700;color:var(--dark);font-size:18px;letter-spacing:0.2px;text-decoration:none;cursor:pointer}
 @media (max-width:720px){
   .brand-name{font-size:16px}
 }
+
+.brand-name:hover{color:var(--primary);text-decoration:underline}
