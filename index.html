@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RESCAPE — Student housing reimagined</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-left">
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+      </div>
+      <div class="nav-center">
+        <img src="assets/images/rescape-logo.jpg" alt="Rescape logo" class="nav-logo">
+      </div>
+      <div class="nav-right">
+        <button class="filter-btn">Filter</button>
+        <a class="btn primary" href="#">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay">
+        <img src="assets/images/rescape-logo.jpg" alt="Rescape logo" class="hero-logo">
+        <p class="slogan">Student housing reimagined</p>
+        <form class="search-form" role="search">
+          <div class="fields">
+            <input name="university" placeholder="University name" aria-label="University name">
+            <input name="city" placeholder="City" aria-label="City">
+            <select name="type" aria-label="Accommodation type">
+              <option value="">Accommodation type</option>
+              <option>Apartment</option>
+              <option>Shared house</option>
+              <option>Studio</option>
+            </select>
+          </div>
+          <button class="btn primary" type="submit">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="listing-intro">
+      <h2>Find verified student accommodation</h2>
+      <p>Browse verified listings, compare distances, prices and read student reviews.</p>
+    </section>
+
+    <section class="cards" aria-label="Featured accommodation">
+      <article class="card">
+        <div class="card-media" style="background-image:url('assets/images/rescape-logo.jpg')"></div>
+        <div class="card-body">
+          <h3>Sample Property</h3>
+          <p class="meta">1.2 km from campus • R3500 / month</p>
+          <p class="desc">Clean, secure student accommodation with WiFi and shuttle access.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-media" style="background-image:url('assets/images/rescape-logo.jpg')"></div>
+        <div class="card-body">
+          <h3>Sample Studio</h3>
+          <p class="meta">0.8 km from campus • R4200 / month</p>
+          <p class="desc">Comfortable studio with private bathroom and study area.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="partners">
+      <h3>Trusted by Students &amp; Universities</h3>
+      <div class="logos">
+        <img src="assets/images/rescape-logo.jpg" alt="Partner logo">
+        <img src="assets/images/rescape-logo.jpg" alt="Partner logo">
+        <img src="assets/images/rescape-logo.jpg" alt="Partner logo">
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>&copy; RESCAPE</p>
+    </footer>
+  </main>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', function(){
+      document.body.classList.toggle('menu-open');
+    });
+  </script>
+</body>
+</html>

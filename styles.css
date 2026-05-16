@@ -1,0 +1,50 @@
+/* RESCAPE styles — palette from design doc */
+:root{
+  --white:#FFFFFF;
+  --ice:#F5F7FA;
+  --muted:#A0AEC0;
+  --dark:#2D3748;
+  --primary:var(--dark);
+  --radius:12px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:'Helvetica Neue',Arial,sans-serif;color:var(--dark);background:var(--white)}
+
+.site-header{position:fixed;top:0;left:0;right:0;background:transparent;padding:10px 16px;z-index:20}
+.nav{display:flex;align-items:center;justify-content:space-between;max-width:1100px;margin:0 auto}
+.nav-logo{height:36px}
+.menu-toggle{background:none;border:0;font-size:20px}
+.filter-btn{background:transparent;border:1px solid var(--muted);padding:6px 10px;border-radius:8px;color:var(--dark)}
+.btn{padding:8px 14px;border-radius:8px;border:0;cursor:pointer}
+.btn.primary{background:var(--primary);color:var(--white)}
+
+.hero{height:86vh;min-height:420px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(45,55,72,0.25), rgba(45,55,72,0.25)), url('assets/images/rescape-logo.jpg') center/cover no-repeat}
+.hero-overlay{max-width:960px;width:100%;text-align:center;padding:48px}
+.hero-logo{width:160px;height:auto;margin:0 auto;display:block;border-radius:8px}
+.slogan{color:var(--muted);font-size:18px;margin:12px 0 20px}
+.search-form{display:flex;flex-direction:column;gap:12px;align-items:center}
+.search-form .fields{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.search-form input, .search-form select{padding:12px 14px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);min-width:160px}
+
+.listing-intro{max-width:900px;margin:36px auto;text-align:center;padding:0 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;max-width:1100px;margin:18px auto;padding:0 16px}
+.card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 20px rgba(45,55,72,0.08);border:1px solid rgba(0,0,0,0.04)}
+.card-media{height:160px;background-size:cover;background-position:center}
+.card-body{padding:14px}
+.card h3{margin:0 0 6px}
+.card .meta{color:var(--muted);font-size:14px;margin-bottom:8px}
+
+.partners{max-width:1100px;margin:36px auto;padding:20px 16px;text-align:center;background:var(--ice);border-radius:12px}
+.partners .logos{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:nowrap;overflow:auto;padding:8px}
+.partners img{height:44px;opacity:0.7}
+
+.site-footer{text-align:center;padding:32px;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:720px){
+  .hero{height:72vh;padding-top:46px}
+  .hero-logo{width:120px}
+  .nav-logo{height:30px}
+  .search-form .fields{flex-direction:column}
+}
