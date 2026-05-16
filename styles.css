@@ -26,6 +26,8 @@ html,body{height:100%;margin:0;font-family:'Helvetica Neue',Arial,sans-serif;col
 .nav a{color:var(--dark);text-decoration:none;padding:8px 10px;border-radius:8px;transition:background .15s ease,color .15s ease}
 .nav a:hover,.nav a:focus{background:var(--ice);color:var(--primary)}
 .menu-toggle:focus,.brand-link:focus,.nav a:focus{outline:2px solid rgba(45,55,72,0.08);outline-offset:2px}
+/* Mobile menu hidden by default on desktop */
+.mobile-nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--white);box-shadow:0 8px 24px rgba(45,55,72,0.12);border-top:1px solid rgba(0,0,0,0.04);transform-origin:top;transform:translateY(-8px) scaleY(0.98);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s ease;z-index:140}
 
 .hero{height:86vh;min-height:420px;display:flex;align-items:center;justify-content:center;background:var(--white);}
 .hero-overlay{max-width:960px;width:100%;text-align:center;padding:48px}
@@ -71,6 +73,7 @@ html,body{height:100%;margin:0;font-family:'Helvetica Neue',Arial,sans-serif;col
   .nav-center{flex:1;display:flex;justify-content:center}
   .site-header{padding:8px 12px}
   .mobile-nav{position:absolute;left:0;right:0;top:100%;background:var(--white);box-shadow:0 8px 24px rgba(45,55,72,0.12);border-top:1px solid rgba(0,0,0,0.04);transform-origin:top;transform:translateY(-8px) scaleY(0.98);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s ease;z-index:140}
+  .mobile-nav{display:block}
   .mobile-nav .nav-group{display:flex;flex-direction:column;padding:12px}
   .mobile-nav a{display:block;padding:10px 12px;border-radius:8px;color:var(--dark);text-decoration:none}
   body.nav-open .mobile-nav{opacity:1;transform:translateY(0) scaleY(1);pointer-events:auto}
