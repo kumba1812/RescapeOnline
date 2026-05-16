@@ -19,7 +19,7 @@ html,body{height:100%;margin:0;font-family:'Helvetica Neue',Arial,sans-serif;col
 .btn{padding:8px 14px;border-radius:8px;border:0;cursor:pointer}
 .btn.primary{background:var(--primary);color:var(--white)}
 
-.hero{height:86vh;min-height:420px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(45,55,72,0.25), rgba(45,55,72,0.25)), url('assets/images/rescape-logo.jpg') center/cover no-repeat}
+.hero{height:86vh;min-height:420px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(245,247,250,1), rgba(255,255,255,1));}
 .hero-overlay{max-width:960px;width:100%;text-align:center;padding:48px}
 .hero-logo{width:160px;height:auto;margin:0 auto;display:block;border-radius:8px}
 .slogan{color:var(--muted);font-size:18px;margin:12px 0 20px}
