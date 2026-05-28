@@ -24,6 +24,7 @@ html,body{height:100%;margin:0;font-family:'Helvetica Neue',Arial,sans-serif;col
 .btn{padding:8px 14px;border-radius:8px;border:0;cursor:pointer}
 .btn.primary{background:var(--primary);color:var(--white)}
 
+.card-link{color:inherit;text-decoration:none}
 .nav a{color:var(--dark);text-decoration:none;padding:8px 10px;border-radius:8px;transition:background .15s ease,color .15s ease}
 .nav a:hover,.nav a:focus{background:var(--ice);color:var(--primary);text-decoration: none;}
 .menu-toggle:focus,.brand-link:focus,.nav a:focus{outline:2px solid rgba(45,55,72,0.08);outline-offset:2px}
@@ -32,11 +33,11 @@ html,body{height:100%;margin:0;font-family:'Helvetica Neue',Arial,sans-serif;col
 .mobile-nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--white);box-shadow:0 8px 24px rgba(45,55,72,0.12);border-top:1px solid rgba(0,0,0,0.04);transform-origin:top;transform:translateY(-8px) scaleY(0.98);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s ease;z-index:140}
 .mobile-logo{display:none;position:absolute;left:0;right:0;top:100%;background:var(--white);box-shadow:0 8px 24px rgba(45,55,72,0.12);border-top:1px solid rgba(0,0,0,0.04);transform-origin:top;transform:translateY(-8px) scaleY(0.98);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s ease;z-index:140}
 
-.hero{height:86vh;min-height:420px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(45,55,72,0.25), rgba(45,55,72,0.25)), url('assets/images/doc/image\ -\ residential.png') center/cover no-repeat}
-.hero-overlay{max-width:960px;width:100%;text-align:center;padding:48px}
-.hero-overlay h1{color: #A0AEC0;}
+.hero{height:86vh;height:250px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(45,55,72,0.25), rgba(45,55,72,0.25)), url('assets/images/doc/image\ -\ residential.png') center/cover no-repeat}
+.hero-overlay{max-width:960px;width:100%;text-align:center;padding:20px}
+.hero-overlay h1{color:#ffffff;}
 .hero-logo{width:160px;height:auto;margin:0 auto;display:block;border-radius:8px}
-.slogan{color:#FFFFFF;font-size:18px;margin:12px 0 20px}
+.slogan{color:#bec7d3;;font-size:18px;margin:12px 0 20px}
 .search-form{display:flex;flex-direction:column;gap:12px;align-items:center}
 .search-form .fields{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
 input:not([type=submit]):not([type=button]):not([type=reset]),
@@ -76,7 +77,7 @@ textarea:focus,
 @media (min-width:1000px){
   .cards{grid-template-columns:repeat(3,1fr);gap:24px}
   .card-media{height:200px}
-  .hero-overlay{padding:72px}
+  .hero-overlay{padding:20px}
   .partners .logos{gap:28px}
   .nav{max-width:1200px}
 }
@@ -85,7 +86,8 @@ textarea:focus,
 
 /* Responsive */
 @media (max-width:720px){
-  .hero{height:61vh;padding-top:46px}
+  .hero{height:35vh;padding-top:20px}
+  .hero-home{height:55vh;}
   .hero-logo{width:120px}
   .nav-logo{height:30px}
   .search-form .fields{flex-direction:column}
@@ -95,8 +97,9 @@ textarea:focus,
   .site-header{padding:8px 12px; background-color: #A0AEC0;}
   .mobile-nav{position:absolute;left:0;right:0;top:100%;background:var(--white);box-shadow:0 8px 24px rgba(45,55,72,0.12);border-top:1px solid rgba(0,0,0,0.04);transform-origin:top;transform:translateY(-8px) scaleY(0.98);opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s ease;z-index:140}
   .mobile-nav{display:block}
-  .mobile-nav .nav-group{display:flex;flex-direction:column;padding:12px}
-  .mobile-nav a{display:block;padding:10px 12px;border-radius:8px;color:var(--dark);text-decoration:none}
+  .mobile-nav .nav-group{display:flex;flex-direction:column;padding:12px;border:2px solid #A0AEC0;margin:0 1px 1px 1px;background-color: #5e5e5e;}
+  .mobile-nav a{display:block;padding:10px 12px;border-radius:8px;color:#ededed;font-weight:600;text-decoration:none}
+  .mobile-nav a:hover{background-color: #4a4a4a;color: #ffffff;}
   body.nav-open .mobile-nav{opacity:1;transform:translateY(0) scaleY(1);pointer-events:auto}
   body.nav-open{overflow:hidden}
 }
